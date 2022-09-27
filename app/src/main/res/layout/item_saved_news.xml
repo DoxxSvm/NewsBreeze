@@ -1,0 +1,65 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:id="@+id/saved_news"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+    <com.google.android.material.card.MaterialCardView
+        android:layout_marginTop="20dp"
+        android:layout_width="100dp"
+        android:layout_marginLeft="20dp"
+        android:layout_marginRight="20dp"
+        android:layout_height="100dp"
+        android:id="@+id/card"
+        app:cardCornerRadius="20dp"
+        app:cardElevation="0dp"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent">
+        <ImageView
+            android:scaleType="fitXY"
+            android:id="@+id/thumbnail"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:src="@drawable/logo"/>
+
+    </com.google.android.material.card.MaterialCardView>
+    <TextView
+        android:paddingEnd="5dp"
+        android:lineSpacingExtra="5dp"
+        android:id="@+id/title"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        app:layout_constraintStart_toEndOf="@id/card"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        android:layout_marginTop="35dp"
+        android:text="title"
+        android:maxLines="2"
+        android:textSize="15sp"
+        android:fontFamily="@font/queen"
+        android:textColor="@color/black"
+        android:layout_marginStart="10dp"/>
+    <TextView
+        android:textSize="12sp"
+        android:id="@+id/date"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        app:layout_constraintStart_toEndOf="@id/card"
+        app:layout_constraintTop_toBottomOf="@id/title"
+        android:text="date."
+        android:textColor="@color/grey"
+        android:layout_marginStart="10dp"/>
+    <TextView
+        android:textSize="12sp"
+        android:id="@+id/author"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        app:layout_constraintStart_toEndOf="@id/date"
+        app:layout_constraintTop_toBottomOf="@id/title"
+        android:text="author"
+        android:textColor="@color/grey"
+        android:layout_marginStart="10dp"/>
+
+
+
+</androidx.constraintlayout.widget.ConstraintLayout>
