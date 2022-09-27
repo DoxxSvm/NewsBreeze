@@ -13,8 +13,6 @@ interface NewsAPI {
         countryCode: String = "in",
         @Query("page")
         pageNumber: Int=1,
-        @Query("q")
-        contains: String=" ",
         @Query("sortBy")
         sortBy:String="popularity",
         @Query("apiKey")
